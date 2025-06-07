@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(to right, #d1d8e0, #f5f6fa);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+    min-height: 100vh;
+  }
+   .calculator-container {
+    max-width: 420px;
+    flex-grow: 1;
+    border: 5px solid #2f3542;
+    border-radius: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.75);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+  }
+    .calculator {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+    #display {
+    height: 60px;
+    font-size: 1.8rem;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    text-align: right;
+    background: #fff;
+    color: #2f3542;
+    font-weight: bold;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+    outline: none;
+    user-select: text;
+  }
+  
+  .row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  
+  button {
+    padding: 20px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 12px;
+    background: #ced6e0;
+    color: #2f3542;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 3px 3px 5px #a4b0be, -3px -3px 5px #ffffff;
+    user-select: none;
+  }
+  
+  button:hover {
+    background: #a4b0be;
+  }
+  
+  button.equal {
+    grid-column: span 2;
+    background: #2ed573;
+    color: white;
+  }
+  
+  .history-container {
+    max-width: 320px;
+    max-height: 600px;
+    overflow-y: auto;
+    flex-grow: 1;
+    background: rgba(255, 255, 255, 0.75);
+    border-radius: 15px;
+    padding: 15px 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+  .history-container h2 {
+    margin: 0 0 10px 0;
+    font-weight: 700;
+    color: #2f3542;
+  }
+  
+  #historyList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+    #historyList li {
+    background: #51666e;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #07090c;
+    user-select: none;
+    transition: background-color 0.2s ease;
+  }
+  
+  #historyList li:hover {
+    background-color: #658dbb;
+    color: rgb(250, 207, 137);
+  }
+    @media (max-width: 900px) {
+    body {
+      flex-direction: column;
+      align-items: center;
+    }
+    .calculator-container, .history-container {
+      max-width: 95%;
+      max-height: none;
+      margin-bottom: 20px;
+    }
+  }
+  
